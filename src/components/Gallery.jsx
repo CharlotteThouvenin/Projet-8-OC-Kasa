@@ -1,6 +1,7 @@
 
 import Card from './Card';
 import dataList from '../data/data.json'
+import '../styles/gallery.scss'
 
 function Gallery() {
 
