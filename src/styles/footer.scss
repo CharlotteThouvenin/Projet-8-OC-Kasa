@@ -1,10 +1,19 @@
 .footer{
+    margin:0;
     background-color: black;
-    color: white;
+    color: #FFF;
     height: 209px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin: 0;
+    justify-content: space-around;
+
+    &__logo{
+        width: 122px;
+        padding-top: 66px;
+    }
+    &__text{
+        font-size: 24px;
+        padding-bottom: 29px;
+    }
 }

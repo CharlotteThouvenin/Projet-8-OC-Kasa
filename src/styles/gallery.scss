@@ -1,11 +1,12 @@
 .gallery{
-    display: flex;
-    flex-wrap: wrap;
-    height:auto;
-    width: 100%;
     border-radius: 25px;
+    max-width: 100%;
+    margin: 43px 100px 50px 100px;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
     background-color: rgba(246, 246, 246, 1);
-    padding: 35px;
-    margin: 20px 100px;
-
 }

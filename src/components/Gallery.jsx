@@ -1,23 +1,46 @@
-
+import data from '../data/data.json';
 import Card from './Card';
-import dataList from '../data/data.json'
-import '../styles/gallery.scss'
+import '../styles/gallery.scss';
+import { Link } from 'react-router-dom';
 
-function Gallery() {
+//import React, { useEffect, useState } from 'react';
 
-    const firstSixCards = dataList.slice(0,6);
+export default function Gallery () {
+  // const [data, setData] = useState(null);
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch('../data/data.json');
+
+  //       if (response.ok) {
+  //         const dataList = await response.json();
+  //         setData(dataList);
+
+  //       } else {
+  //         console.error('La requête a échoué avec le statut:', response.status);
+  //       }
+  //     } catch (error) {
+  //       console.error('Erreur lors de la récupération des données:', error);
+  //     }
+  //   };
+
+  //   fetchData();
+  // },[]);
 
   return (
     <div className="gallery">
-        {firstSixCards.map(({id, cover, title}) => (
+        {data && data.map(({ id, cover, title }) => (
+          <Link key={id} to={`/Fiche/${id}`}>
             <Card
-                key={id}
-                cover={cover}
-                title={title}
+              key={`card${id}`}
+              cover={cover}
+              title={title}
             />
+            </Link>
         ))}
     </div>
   );
-}
+};
 
-export default Gallery;
+
