@@ -1,0 +1,48 @@
+@import './variables';
+
+.collapse{
+    &__title{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: $maincolor;
+        color: #FFF;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: 500;
+
+
+        &__icon{
+            cursor: pointer;
+            transform: rotate(0deg);
+            transition: all 0.3s;
+        }
+    }
+    &__content{
+        visibility: hidden;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0 20px;
+        transition: all 0.3s ease-in;
+        background-color: $secondcolor;
+    }
+}
+
+.active .collapse__title__icon{
+    transform: rotate(180deg);
+}
+
+.active .collapse__content{
+    visibility: visible;
+    height: auto;
+    overflow: visible;
+    padding: 20px;
+    opacity: 1;
+}
+
+.medium {
+    width: 48%;
+}

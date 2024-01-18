@@ -1,0 +1,11 @@
+.fiche{
+    &__content{
+        display: flex;
+        justify-content: space-between;
+
+        &__equipement{
+            display: flex;
+            justify-content: space-between;
+        }
+        }
+    }

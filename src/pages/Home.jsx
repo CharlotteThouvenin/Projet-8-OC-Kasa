@@ -3,7 +3,7 @@ import Banner from "../components/Banner";
 import Gallery from "../components/Gallery";
 import banner from '../assets/banner.png'
 
-function App() {
+function Home () {
   return (
     <div>
       <Banner
@@ -15,4 +15,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
