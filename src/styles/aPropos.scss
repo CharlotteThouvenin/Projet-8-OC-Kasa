@@ -1,3 +1,9 @@
 .about__collapses{
-    margin: 0px 108.5px;
+    margin: 48px 108.5px;
+    display: grid;
+    grid-template-columns: 1;
+    gap: 30px;
+    @media (max-width: 767.98px){
+        gap:20px;
+    }
 }

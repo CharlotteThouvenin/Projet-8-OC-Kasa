@@ -13,8 +13,16 @@
         width: 122px;
         padding-top: 66px;
     }
+
     &__text{
         font-size: 24px;
         padding-bottom: 29px;
+        @media (max-width: 767.98px){
+           color: #FFF;
+            text-align: center;
+            font-size: 12px;
+            width: 133.594px;
+        }
+        
     }
 }

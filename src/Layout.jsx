@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import APropos from "./pages/APropos";
 import Fiche from './pages/Fiche';
 import './styles/layout.scss'
+import Erreur from './pages/Erreur';
 
 
 export default function Layout () {
@@ -16,7 +17,7 @@ export default function Layout () {
                 <Routes>
                     <Route path='/' element = {<Home />} />
                     <Route path='/APropos' element = {<APropos />} />
-                    <Route path='/Erreur' />
+                    <Route path='/*' element = {<Erreur />}/>
                     <Route path='/Fiche/:id' element = {<Fiche />}/>
                 </Routes>
                 </div>

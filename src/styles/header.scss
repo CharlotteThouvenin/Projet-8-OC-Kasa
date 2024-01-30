@@ -3,9 +3,15 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 40px 100px 0px 100px;
+    @media (max-width: 767.98px){
+        padding: 20px 20px 0px 20px;
+    }
 
     &__logo{
         height: 68px;
+        @media (max-width: 767.98px){
+            height:47px;
+        }
     }
 
     &__nav{
@@ -16,6 +22,11 @@
         width: 300px;
         justify-content: space-between;
         align-items: center;
+        @media (max-width: 767.98px){
+            font-size: 12px;
+            justify-content: flex-end;
+            gap: 26px;
+        }
 
         &__home{
             color: inherit;

@@ -5,13 +5,19 @@ import data from '../assets/data.json'
 import Carousel from '../components/Carousel';
 import Collapse from '../components/Collapse';
 import '../styles/fiche.scss'
+import Rating from '../components/Rating';
 
 
 
-const Fiche = () => {
+function Fiche () {
+  
   const { id } = useParams();
 
+
+  console.log(data)
+
   const dataFiche = data.find((fiche) => fiche.id.toString() === id);
+
 console.log(dataFiche.pictures)
 
   return (
@@ -26,14 +32,18 @@ console.log(dataFiche.pictures)
           <p>{dataFiche.location}</p>
           <div className='fiche__content__title__tags'>
             {dataFiche.tags.map((tag, index) => (
-              <div key={index}>{tag}</div>
+              <div className='tag' key={index}>{tag}</div>
           ))}
           </div>
         </div>
 
         <div className='fiche__content__host'>
-              <div className='fiche__content__host__name'>{dataFiche.host.name}</div>
-              <img className='fiche__content__host__picture' src={dataFiche.host.picture} alt={dataFiche.host.name} />
+              <div className='fiche__content__host__wrapper'>
+                <div className='fiche__content__host__wrapper__name'>{dataFiche.host.name}</div>
+              <img className='fiche__content__host__wrapper__picture' src={dataFiche.host.picture} alt={dataFiche.host.name} />
+              </div>
+              
+              <Rating rating = {dataFiche.rating} />
 
         </div>
       </div>  
@@ -48,9 +58,8 @@ console.log(dataFiche.pictures)
             title = 'Équipements'
             content = {
               dataFiche.equipments.map((equipement, index) => (
-                <ul>
-                  <li key = {index}>{equipement}</li>
-                </ul>
+                <p key = {index}>{equipement}</p>
+              
               ))
             }
             size = 'medium'

@@ -9,4 +9,9 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(246, 246, 246, 1);
+    @media (max-width: 767.98px){
+        background-color: #fff;
+        margin:0;
+        padding: 0;
+    }
 }

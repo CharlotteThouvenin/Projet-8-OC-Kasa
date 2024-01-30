@@ -1,0 +1,15 @@
+.stars{
+    width: 196px;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    @media (max-width: 767.98px){
+        width: 98px;
+        justify-content: space-between;
+    }
+    & img {
+        @media (max-width: 767.98px){
+            width: 16px;
+        }
+    }
+}

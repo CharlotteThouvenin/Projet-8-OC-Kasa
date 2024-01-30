@@ -1,22 +1,42 @@
-.card{
+.card {
+    position: relative; /* Ajoutez cette propriété pour permettre le positionnement absolu du pseudo-élément */
     display: flex;
     align-items: flex-end;
     margin: 20px;
     width: 340px;
     height: 340px;
-    
-        &__img{
-            object-fit: cover;
-            width: 340px;
-            height: 340px;
-            border-radius: 10px;
-        }
-        &__title{
-            position: absolute;
-            width: 300px;
-            font-size: 18px;
-            text-wrap: wrap;
-            padding: 20px;
-            color:#fff;
-        }
+    border-radius: 10px; /* Déplacez le border-radius ici pour éviter la répétition */
+    @media (max-width: 767.98px){
+        width: 335px;
+        height: 255px;
+        margin: 20px 0 0 0;
+    }
+
+    &::before {
+        content: ""; 
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 10px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
+    }
+
+    &__img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px; /* Vous pouvez omettre cette ligne si le border-radius est déjà défini sur la classe principale */
+    }
+
+    &__title {
+        position: absolute;
+        width: 300px;
+        font-size: 18px;
+        word-wrap: break-word; /* Utilisez word-wrap au lieu de text-wrap */
+        padding: 20px;
+        color: #fff;
+        z-index: 1; /* Assurez-vous que le titre est au-dessus du pseudo-élément */
+    }
 }

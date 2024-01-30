@@ -10,8 +10,8 @@
         background-color: $maincolor;
         color: #FFF;
         border-radius: 5px;
-        font-size: 18px;
-        font-weight: 500;
+        font-size: 24px;
+        font-weight: 700;
 
 
         &__icon{
@@ -21,6 +21,9 @@
         }
     }
     &__content{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 142.6%;
         visibility: hidden;
         height: 0;
         opacity: 0;
@@ -32,7 +35,7 @@
 }
 
 .active .collapse__title__icon{
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
 }
 
 .active .collapse__content{
@@ -43,6 +46,44 @@
     opacity: 1;
 }
 
+
+
 .medium {
-    width: 48%;
+    width: calc(50% - 38px);
+
+    & .collapse__title{
+        height: 42px;
+        padding: 20px;
+        font-size: 18px;
+        font-weight: 500;
+        &__icon{
+            height: 32px;
+            width: 32px;
+            @media (max-width: 767.98px){
+            height: 24px;
+            width: 24px;
+            }
+        }
+        @media (max-width: 767.98px){
+            font-size: 13px;
+            font-weight: 700;   
+        }
+    }
+
+    & .collapse__content{
+        @media (max-width: 767.98px){
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 17px;
+        }
+    }
+    @media (max-width: 767.98px){
+        width: 100%;
+        color: #000;
+
+
+    }
+
+    
+    
 }
