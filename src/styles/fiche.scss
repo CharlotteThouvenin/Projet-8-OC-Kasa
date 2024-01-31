@@ -37,19 +37,18 @@
                 & .tag{
                     display: flex;
                     align-items: center;
+                    justify-content: center;
                     box-sizing: border-box;
                     height: 25px;
                     min-width: 115px;
                     border-radius: 10px;
                     background-color: $maincolor;
                     color: $textcolor;
-                    text-align: center;
                     padding: 2px 10px;
                     font-size: 14px;
                     font-weight: 700;
                     @media (max-width: 767.98px){
                         font-size: 10px;
-                        font-weight: 700;
                         height: 18px;
                         min-width: 84px;
                         border-radius: 5px;

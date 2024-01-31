@@ -16,9 +16,8 @@ const Carousel = ({ images }) => {
     );
   };
 
-  const notSingleImage = images.length > 1; //vérifie s'il n'y a qu'une seule image
-
-console.log(notSingleImage)
+  const notSingleImage = images.length > 1; 
+  
   return (
     <div className="carousel">
       
