@@ -8,7 +8,10 @@ import './styles/layout.scss'
 import Erreur from './pages/Erreur';
 
 
+
 export default function Layout () {
+
+    
     return (
         <div>
             <Router>
@@ -17,8 +20,8 @@ export default function Layout () {
                 <Routes>
                     <Route path='/' element = {<Home />} />
                     <Route path='/APropos' element = {<APropos />} />
-                    <Route path='/*' element = {<Erreur />}/>
-                    <Route path='/Fiche/:id' element = {<Fiche />}/>
+                    <Route path='*' element = {<Erreur />}/>
+                    <Route path='/Fiche/:id' element = {<Fiche />} />
                 </Routes>
                 </div>
                 <Footer />

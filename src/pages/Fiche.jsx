@@ -6,19 +6,19 @@ import Carousel from '../components/Carousel';
 import Collapse from '../components/Collapse';
 import '../styles/fiche.scss'
 import Rating from '../components/Rating';
-
+import Erreur from './Erreur';
 
 
 function Fiche () {
   
   const { id } = useParams();
 
-
-  console.log(data)
-
   const dataFiche = data.find((fiche) => fiche.id.toString() === id);
 
-console.log(dataFiche.pictures)
+
+if (!dataFiche){
+  return (<Erreur />)
+}
 
   return (
     <div className='fiche'>
